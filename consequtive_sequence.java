@@ -3,19 +3,35 @@
 // Sample array: [49, 1, 3, 200, 2, 4, 70, 5] 
 // The longest consecutive elements sequence is [1, 2, 3, 4, 5], 
 // therefore the program will return its length 5.
+
+import java.util.HashSet;
+
 public class consequtive_sequence {
  public static void main(String[] args) {
      int[] arr = {49, 50, 3, 200, 2, 4, 70, 5};
-     int left = 0; int curr_el = arr[0]; int len = 0;
-    for(int i = 1; i<arr.length; i++){
-        if(arr[i] == curr_el+1){ // 50 == 50? yes // 3 == 51? No
-            arr[left] = curr_el; // arr[0] = 49
-            curr_el = arr[i]; // curr_el = 50;
-            left++; // 1
-            len++;
-        }else{
-
+    //  int left = 0; int curr_el = arr[0]; int len = 0;
+    HashSet<Integer> set = new HashSet<Integer>();
+    int maxCount = 0; int bestStart = 0;
+    for(int i = 0; i<arr.length; i++){
+      set.add(arr[i]);
+    }
+    for(int i = 0; i<arr.length; i++){
+      if(!set.contains(arr[i]-1)){
+        int count=1;
+        int current = arr[i];
+        while(set.contains(current +1)){ 
+          count++;//2
+          current = current+1;
         }
+        if(maxCount < count){
+          maxCount = count;
+          bestStart = arr[i];
+        }
+      }
+    }
+    System.out.println(maxCount );
+    for(int j = 0; j<maxCount; j++){
+      System.out.print((j + bestStart) +" ");
     }
  }   
 }
