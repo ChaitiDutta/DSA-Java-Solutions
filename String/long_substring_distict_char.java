@@ -15,13 +15,15 @@ public class long_substring_distict_char {
     public static void main(String[] args) {
         var map = new HashMap<Character, Integer>();
         int maxLen = 0; int left = 0;
-        String s = "abcabcbb";
+        String s = "pwwkew";
         for(int i = 0; i<s.length(); i++){
-             map.put(s.charAt(i), i);
-            if(map.containsKey(s.charAt(i))){   
-                left = Math.max(left, i+1 );    //0,          
+            if(map.containsKey(s.charAt(i))){   //yes
+                left = Math.max(left, map.get(s.charAt(i))+1 );
             }
-             maxLen = Math.max(maxLen, i - left + 1);
-        }
+             map.put(s.charAt(i), i); //a,3
+       
+             maxLen = Math.max(maxLen, i - left + 1); //3
+            }
+            System.out.println(maxLen);
     }
 }

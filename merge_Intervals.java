@@ -15,11 +15,7 @@ public class merge_Intervals {
         List<int[]> list = new ArrayList<>();
         for(int i = 1; i<intervals.length; i++){
             if(intervals[i][0] <= currentArr1){//8<=6?
-                // start = Math.min(currentArr0 ,intervals[i][0]); //1
                 currentArr1 = Math.max(currentArr1, intervals[i][1]);//6
-                // intervals[i][0] = currentArr0;
-                // currentArr1 = intervals[i][1];//2
-                // currentArr0 = intervals[i][0]; //6
             }else{
                 list.add(new int[]{currentArr0, currentArr1});
                  currentArr1 = intervals[i][1];//2

@@ -8,24 +8,24 @@ import java.util.HashSet;
 
 public class consequtive_sequence {
  public static void main(String[] args) {
-     int[] arr = {49, 50, 3, 200, 2, 4, 70, 5};
+     int[] arr = {0,0,-1};
     //  int left = 0; int curr_el = arr[0]; int len = 0;
     HashSet<Integer> set = new HashSet<Integer>();
     int maxCount = 0; int bestStart = 0;
     for(int i = 0; i<arr.length; i++){
       set.add(arr[i]);
     }
-    for(int i = 0; i<arr.length; i++){
-      if(!set.contains(arr[i]-1)){
+    for(int num: set){
+      if(!set.contains(num-1)){
         int count=1;
-        int current = arr[i];
+        int current = num;
         while(set.contains(current +1)){ 
           count++;//2
           current = current+1;
         }
         if(maxCount < count){
           maxCount = count;
-          bestStart = arr[i];
+          bestStart = num;
         }
       }
     }
