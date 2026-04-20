@@ -21,11 +21,12 @@ public class set_matrix_zero {
 
     // }
     public static void main(String[] args) {
-        int[][] matrix = {
-                        {1,1,1},
-                        {1,0,1},
-                        {1,1,1}
-                        };
+int[][] matrix = {{0,1}};
+        // {
+        //                 {1,1,1},
+        //                 {1,0,1},
+        //                 {1,1,1}
+        //                 };
         // Print the original 2D array.
         System.out.println("old matrix : ");
         for(int i=0; i<matrix.length; i++){
@@ -46,7 +47,7 @@ public class set_matrix_zero {
                 firstColZero = true;
             }
          }
-         for(int j = 0; j<matrix.length; j++){
+         for(int j = 0; j<matrix[0].length; j++){
             if(matrix[0][j] == 0){
                 firstRowZero = true;
             }
@@ -67,12 +68,12 @@ public class set_matrix_zero {
             }
          }
          if(firstRowZero){
-            for(int j = 0; j<matrix.length; j++){
+            for(int j = 0; j<matrix[0].length; j++){
                 matrix[0][j] = 0;
             }
          }
          if(firstColZero){
-            for(int i = 0; i<matrix[0].length; i++){
+            for(int i = 0; i<matrix.length; i++){
                 matrix[i][0] = 0;
             }
          }
