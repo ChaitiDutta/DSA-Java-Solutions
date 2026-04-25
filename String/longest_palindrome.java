@@ -9,5 +9,6 @@ public class longest_palindrome {
     public static void main(String[] args) {
         String s= "cbbd";
         int left = 0; int right = s.length()-1;
+        
     }
 }
