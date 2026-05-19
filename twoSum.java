@@ -15,21 +15,36 @@ import java.util.HashMap;
 
 public class twoSum {
     public static void main(String[] args){
-        int[] num = {3,3};
-        int target = 6;
-        
-        var mapValue = new HashMap<Integer, Integer>();
+        int[] num = {2,11,7,15};
+        var map = new HashMap<Integer,Integer>();
+        int t = 9;
 
-        for(int i =0; i<num.length; i++){
-            int required = target - num[i];
-            if(mapValue.containsKey(required)){
-                System.out.println("indeces :" + mapValue.get(required) + ", "+ i);
-                break;
-            }else{
-                  mapValue.put(num[i], i);
+        for(int i = 0; i<num.length; i++){
+            int r = t- num[i];//2
+            if(map.containsKey(r)){ //2?
+                System.out.println(map.get(r) + ", " + i);
             }
-
+            map.put(num[i],i ); //(2,0)
+            
         }
+
+
+
+        // int[] num = {3,3};
+        // int target = 6;
+        
+        // var mapValue = new HashMap<Integer, Integer>();
+
+        // for(int i =0; i<num.length; i++){
+        //     int required = target - num[i];
+        //     if(mapValue.containsKey(required)){
+        //         System.out.println("indeces :" + mapValue.get(required) + ", "+ i);
+        //         break;
+        //     }else{
+        //           mapValue.put(num[i], i);
+        //     }
+
+        // }
 
     }
 

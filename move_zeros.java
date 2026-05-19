@@ -10,17 +10,31 @@ import java.util.Arrays;
 
 public class move_zeros {
     public static void main(String[] args) {
-        int[] arr = {0,1,0,3,12};
-        int left = 0; 
+        int[]  arr = {0,1,0,3,0};
+        int l = 0;
         for(int i = 0; i<arr.length; i++){
-            if(arr[i] != 0){ 
-                arr[left] = arr[i];
-                left++;
+            if(arr[i] != 0){
+                arr[l] = arr[i];
+                l++;
             }
         }
-        for(int j = left; j< arr.length; j++){
-            arr[j] = 0;
+        for (int i = l; i<arr.length; i++){
+            arr[i] = 0;
         }
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString((arr)));
+
+
+        // int[] arr = {0,1,0,3,12};
+        // int left = 0; 
+        // for(int i = 0; i<arr.length; i++){
+        //     if(arr[i] != 0){ 
+        //         arr[left] = arr[i];
+        //         left++;
+        //     }
+        // }
+        // for(int j = left; j< arr.length; j++){
+        //     arr[j] = 0;
+        // }
+        // System.out.println(Arrays.toString(arr));
     }
 }
