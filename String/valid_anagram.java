@@ -31,8 +31,8 @@ public class valid_anagram {
         return true;
     }
     public static void main(String[] args) {
-        String s = "cat";
-        String t = "rat";
+        String s = "bat";
+        String t = "sat";
         System.out.println(anagram(s,t));
     }
 }
