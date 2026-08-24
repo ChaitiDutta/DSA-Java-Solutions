@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class twoSum {
     public static void main(String[] args){
-        int[] num = {2,11,7,15};
+        int[] num = {5,9,715,1,2,3,4,5,6,7,8,9};
         var map = new HashMap<Integer,Integer>();
         int t = 9;
 
