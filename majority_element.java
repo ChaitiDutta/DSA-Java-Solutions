@@ -7,7 +7,7 @@
 // Output: 3
 public class majority_element {
     public static void main(String[] args) {
-        int[] arr = {1,1,3};
+        int[] arr = {-1,10,-101,10,-1,10,10};
         int count =0; 
 int curr_El = Integer.MIN_VALUE;
         for(int i =0; i<arr.length; i++){
